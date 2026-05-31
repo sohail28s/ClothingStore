@@ -4,30 +4,26 @@ const categories = [
   {
     title: "Men's",
     link: "/collections/all-mens",
-    img: "https://pand.co/cdn/shop/files/ecombanners_0063_DSCF2543.jpg?v=1774610097&width=970"
+    img: "/Images/Hero/cat-1.webp"
   },
   {
     title: "Women's",
     link: "/collections/all-womens",
-    img: "https://pand.co/cdn/shop/files/ecombanners_0088_DSCF2310.jpg?v=1774610078&width=970"
+    img: "/Images/Hero/cat-2.jpg"
   },
-  {
-    title: "Goods",
-    link: "/collections/all-goods",
-    img: "https://pand.co/cdn/shop/files/LEONECOMSIZEDSPRING26_0047_IMG_4442_0002_P_Co-SS26-250.jpg?v=1769690871&width=970"
-  }
+
 ];
 
 export default function ExploreCategory() {
   return (
-    <section className="w-full bg-[#edecea] py-16 lg:py-24 text-[#1c1a19]">
+    <section className="w-full bg-white py-16 lg:py-24 text-[#1c1a19]">
       <div className="max-w-[1680px] mx-auto px-4 lg:px-8">
         
         <h3 className="font-central text-2xl md:text-3xl font-bold uppercase tracking-[1.2px] text-center mb-10">
           Explore By Category
         </h3>
 
-        <div className="flex lg:grid lg:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-8 lg:pb-0">
+        <div className="flex lg:grid lg:grid-cols-2 justify-center mx-auto gap-6  snap-x snap-mandatory no-scrollbar pb-8 lg:pb-0">
           
           {categories.map((category, idx) => (
             <a 

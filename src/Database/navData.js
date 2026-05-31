@@ -4,7 +4,7 @@ export const navigationData = [
     label: "Men's",
     href: '/collections/men', 
     megaMenu: {
-      defaultImage: "https://pand.co/cdn/shop/files/Spring-4-desktop_0020_DSCF7604.jpg?v=1774449882&width=600",
+      defaultImage: "/Images/Hero/new1.webp",
       categories: [
         { label: "All Men's", href: "/collections/men" },
         {
@@ -16,30 +16,27 @@ export const navigationData = [
             { label: "Pants", href: "/collections/men-pants" },
           ]
         },
-        {
-          label: "Collections",
-          subLinks: [
-            { label: "Activewear", href: "/collections/activewear" },
-            { label: "State Champs", href: "/collections/state-champs" },
-            { label: "Graphic T-Shirts", href: "/collections/graphic-tees" },
-          ]
-        },
+
         // We use URL query parameters like ?sort=newest for these generic lists
         { label: "New Arrivals", href: "/collections/men?sort=newest" }, 
-        { label: "Trending", href: "/collections/trending" },
-        { label: "Guides", href: "/pages/guides" },
-        { label: "Back In Stock", href: "/collections/back-in-stock" },
-        { label: "Best Sellers", href: "/collections/best-sellers" },
-        { label: "Sale", href: "/collections/sale", isRed: true },
+        { label: "Trending", href: "/collections/men?sort=featured" },
+        { label: "Sale", href: "/collections/men?sort=price-asc", isRed: true },
       ]
     }
   },
+
+
+
+
+
+
+
   {
     id: 'nav_women',
     label: "Women's",
     href: '/collections/women', // Matches the 'women' slug
     megaMenu: {
-      defaultImage: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600",
+      defaultImage: "/Images/Hero/new2.jpg",
       categories: [
         { label: "All Women's", href: "/collections/women" },
         {
@@ -52,8 +49,8 @@ export const navigationData = [
           ]
         },
         { label: "New Arrivals", href: "/collections/women?sort=newest" },
-        { label: "Trending", href: "/collections/womens-trending" },
-        { label: "Sale", href: "/collections/womens-sale", isRed: true },
+        { label: "Trending", href: "/collections/women?sort=featured" },
+        { label: "Sale", href: "/collections/women?sort=price-asc", isRed: true },
       ]
     }
   },

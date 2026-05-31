@@ -1,5 +1,3 @@
-
-
 import { useCart } from '../Context/CartContext';
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../Context/AuthContext';
@@ -28,7 +26,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* 1. Changed absolute to sticky, bg-transparent to bg-white, added bottom border, and text-nav-dark */}
       <header className="sticky top-0 left-0 w-full h-16 lg:h-20 flex items-center justify-between px-4 lg:px-8 bg-white text-nav-dark border-b border-gray-200 z-50">
         
         {/* Left Side Hamburger & Mega Menu */}
@@ -64,12 +61,8 @@ export default function Navbar() {
         {/* Right Side Icons */}
         {/* Changed text-white to text-nav-dark */}
         <div className="flex items-center justify-end flex-1 gap-4 lg:gap-6 font-central text-sm uppercase tracking-wider font-medium mt-1 text-nav-dark">
-          <div className="hidden lg:flex items-center gap-6">
-            <a href="#" className="hover:opacity-60 transition-opacity pb-1 border-b-2 border-transparent hover:border-nav-dark">Brand</a>
-            <a href="#" className="hover:opacity-60 transition-opacity pb-1 border-b-2 border-transparent hover:border-nav-dark">Rewards</a>
-          </div>
-
-          <button onClick={() => setIsSearchOpen(!isSearchOpen)} className="hidden lg:flex items-center gap-2 hover:opacity-60 transition-opacity pb-1 border-b-2 border-transparent hover:border-nav-dark">
+        
+          <button onClick={() => setIsSearchOpen(!isSearchOpen)} id="search-toggle-btn" className="hidden lg:flex items-center gap-2 hover:opacity-60 transition-opacity pb-1 border-b-2 border-transparent hover:border-nav-dark">
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
               {isSearchOpen ? 
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /> : 
