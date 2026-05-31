@@ -49,14 +49,12 @@ export default function ProfileSidebar({ isOpen, onClose }) {
           
           {/* User Profile Card */}
           <div className="bg-white p-6 border-b border-nav-border flex items-center gap-6">
-            <div className="w-20 h-20 bg-gray-200 border border-nav-dark shrink-0 flex items-center justify-center font-central text-2xl uppercase tracking-widest">
-              {currentUser.firstName}{currentUser.lastName}
-            </div>
+          
             <div className="flex flex-col gap-1">
               <h2 className="font-central text-xl font-bold uppercase tracking-wider text-nav-dark truncate">
                 {currentUser.firstName} {currentUser.lastName}
               </h2>
-              <p className="font-ballinger text-xs text-gray-500 uppercase tracking-widest truncate">
+              <p className="font-ballinger text-xs text-gray-500  tracking-widest truncate">
                 {currentUser.email}
               </p>
             </div>
@@ -102,13 +100,7 @@ export default function ProfileSidebar({ isOpen, onClose }) {
               <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-nav-dark transition-colors" strokeWidth={1.5} />
             </button>
 
-            <button onClick={() => handleItemClick('payments')} className="flex items-center justify-between w-full py-4 border-b border-nav-border hover:opacity-60 transition-opacity group outline-none">
-              <div className="flex items-center gap-4">
-                <CreditCard className="w-5 h-5 text-nav-dark" strokeWidth={1.5} />
-                <span className="font-central text-sm uppercase tracking-widest font-bold">Payment Methods</span>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-nav-dark transition-colors" strokeWidth={1.5} />
-            </button>
+           
           </div>
 
           {/* Logout */}
