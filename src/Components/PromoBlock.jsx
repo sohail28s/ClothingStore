@@ -24,11 +24,11 @@ export default function PromoBlock() {
       */}
       <div className="flex flex-col justify-center items-center text-center lg:items-start lg:text-left px-6 py-16 lg:px-16 xl:px-24 order-2 text-nav-dark">
         
-        <h2 className="font-central text-3xl md:text-4xl lg:text-[40px] font-bold uppercase leading-tight mb-6 tracking-wide">
+        <h2 className="font-central text-3xl md:text-4xl lg:text-[40px] xl:text-[50px] font-bold uppercase leading-tight mb-6 tracking-wide">
           Serving Good Times<br /> &amp; Nostalgia
         </h2>
         
-        <p className="font-ballinger text-sm md:text-base font-light leading-relaxed mb-6 text-gray-700 max-w-lg">
+        <p className="font-ballinger text-sm md:text-base lg:text-lg font-light leading-relaxed mb-6 text-gray-700 ">
           Our final instalment of spring celebrates the versatility of heritage workwear fabrics- herringbone, hickory stripe, and classic denim. Featuring classic fits and transitional styling, from spring through to summer, this collection features raw hems, heavy fabrics, experimental prints &amp; washes.
           <br /><br />
           With mid-century typography and long-awaited graphics, it’s our most core collection this year- a nod to our Moto &amp; automotive roots.

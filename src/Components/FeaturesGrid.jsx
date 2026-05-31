@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const featuresData = [
   {
-    title: "15% OFF\nFIRST ORDER",
+    title: "FIRST ORDER",
     shortDesc: "Subscribe to our mailing\nlist\nfor 15% off your first\norder T&C",
     modalDesc: "Join our community and get 5% off your first purchase. Be the first to know about new drops, exclusive sales, and brand news.",
     linkText: "SIGN UP",
@@ -17,7 +17,7 @@ const featuresData = [
   },
   {
     title: "FREE NATIONWIDE\nDELIVERY",
-    shortDesc: "Free delivery across Pakistan\non all orders over Rs. 5,000",
+    shortDesc: "Free delivery across Pakistan\non all orders over Rs. 10,000",
     modalDesc: "We offer free tracked shipping on all nationwide orders over Rs. 5,000. Check our shipping page for specific delivery timelines to your city.",
     linkText: "SHIPPING INFO →",
     linkUrl: "#"
