@@ -11,6 +11,7 @@ export default function FilterSortBar({ availableSizes, selectedSizes, onToggleS
           <svg className={`w-4 h-4 transform transition-transform duration-300 ${isFilterOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
+
         </button>
 
         <div className="flex items-center gap-4">
