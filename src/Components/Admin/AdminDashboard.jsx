@@ -158,11 +158,10 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-[#f4f2ed] flex font-ballinger text-nav-dark animate-in fade-in duration-500">
-      
-      {/* ADMIN SIDEBAR */}
+
       <aside className="w-[280px] bg-white border-r border-nav-dark flex-col shrink-0 hidden lg:flex">
         <div className="h-20 border-b border-nav-dark flex items-center px-8 bg-[#f4f2ed]">
-          <span className="font-central text-2xl tracking-[0.2em] font-bold uppercase">P&Co Admin</span>
+          <span className="font-central text-2xl tracking-[0.2em] font-bold uppercase">Outrey Admin</span>
         </div>
         <nav className="flex-1 py-8 px-4 flex flex-col gap-2">
           {adminMenu.map((item) => {
