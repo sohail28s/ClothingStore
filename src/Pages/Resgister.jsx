@@ -104,8 +104,8 @@ export default function AuthPage() {
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center p-4 pt-24 font-central text-nav-dark">
-      <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?q=80&w=2070" alt="Background" className="absolute inset-0 w-full h-full object-cover z-0" />
-      <div className="absolute inset-0 bg-black/20 z-0" />
+    
+      <div className="absolute inset-0 bg-white/80 z-0" />
 
       <div className="relative z-10 w-full max-w-[500px] bg-[#f4f2ed]/85 backdrop-blur-md border border-nav-dark flex flex-col shadow-2xl">
         <div className="flex border-b border-nav-dark">
