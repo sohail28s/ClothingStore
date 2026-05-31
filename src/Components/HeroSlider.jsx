@@ -1,33 +1,21 @@
-// src/components/HeroSlider.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect  } from 'react';
+import {Link} from "react-router-dom"
 
-// ==========================================
-// IMAGE URL VARIABLES (Extracted from your CSS)
-// ==========================================
-// Slide 1: New Arrivals
-const S1_DESKTOP = "https://pand.co/cdn/shop/files/Untitled-1_0000_DSCF2238_1920x.jpg?v=1774606334";
-const S1_MOBILE = "https://pand.co/cdn/shop/files/DROP3ECOMSIZED_0061_LeonSpring2-685_0000_DSCF22351-2_900x.jpg?v=1774453555";
+
+const S1_DESKTOP = "/Images/Hero/new1.webp";
+const S1_MOBILE = "/Images/Hero/new1.webp";
 
 // Slide 2: Mid-Season Sale
-const S2_DESKTOP = "https://pand.co/cdn/shop/files/Web-Banner_2_1920x.jpg?v=1773835882";
-const S2_MOBILE = "https://pand.co/cdn/shop/files/Mobile-Banner_1_0f02058c-fefa-4488-acf1-302b1c524b9e_900x.jpg?v=1773835884";
+const S2_DESKTOP = "/Images/Hero/2.jpg";
+const S2_MOBILE = "/Images/Hero/2small.jpg";
 
-// Slide 3: Split Slide (Heritage / Vintage)
-const S3_LEFT_IMG = "https://pand.co/cdn/shop/files/Web-Banner-01_a709c71a-feae-4072-8fcc-492bb2fe8cb5.jpg?v=1772101272&width=1920";
-const S3_RIGHT_IMG = "https://pand.co/cdn/shop/files/Web-Banner-02_3873ccbb-3a91-40ca-bf5a-b153c0d9e778.jpg?v=1772101275&width=1920";
-
-// Slide 4: Active Season
-const S4_DESKTOP = "https://pand.co/cdn/shop/files/active-desk_0025_IMG_8162_1920x.jpg?v=1770989535";
-const S4_MOBILE = "https://pand.co/cdn/shop/files/active_0001_IMG_8631_900x.jpg?v=1771256739";
+ const S3_LEFT_IMG = "/Images/Hero/new3.webp";
+const S3_RIGHT_IMG = "/Images/Hero/new2.jpg";
 
 // Slide 5: Join the Family
 const S5_DESKTOP = "https://pand.co/cdn/shop/files/Autumn_Drop_2_-_Lookbook41_1920x.jpg?v=1758282936";
 const S5_MOBILE = "https://pand.co/cdn/shop/files/Autumn_Drop_2_-_Lookbook41_900x.jpg?v=1758282936";
 
-
-// ==========================================
-// SLIDER DATA ARCHITECTURE
-// ==========================================
 const sliderData = [
   {
     id: 1,
@@ -39,8 +27,8 @@ const sliderData = [
     position: 'items-end justify-start pb-24 lg:pb-32 pl-6 lg:pl-16 text-left', 
     overlay: 'bg-gradient-to-t from-black/50 via-transparent to-transparent', // Bottom shadow gradient
     buttons: [
-      { label: "Shop Men's", link: "/collections/mens-new-arrivals", style: "bg-white text-black hover:bg-[#f5e8e1]" },
-      { label: "Shop Women's", link: "/collections/womens-new-arrivals", style: "bg-white text-black hover:bg-[#f5e8e1]" }
+      { label: "Shop Men's", link: "/collections/mens", style: "bg-white text-black hover:bg-[#f5e8e1]" },
+      { label: "Shop Women's", link: "/collections/womens", style: "bg-white text-black hover:bg-[#f5e8e1]" }
     ]
   },
   {
@@ -53,7 +41,7 @@ const sliderData = [
     position: 'items-end justify-start pb-24 lg:pb-32 pl-6 lg:pl-16 text-left',
     overlay: 'bg-gradient-to-b from-black/20 via-transparent to-black/40',
     buttons: [
-      { label: "Shop Sale", link: "/collections/last-chance-sale", style: "bg-[#a58c69] text-white hover:bg-[#8f6f4a] border border-[#a58c69]" }
+      { label: "Shop Sale", link: "#", style: "bg-[#a58c69] text-white hover:bg-[#8f6f4a] border border-[#a58c69]" }
     ]
   },
   {
@@ -62,30 +50,16 @@ const sliderData = [
     leftPanel: {
       img: S3_LEFT_IMG,
       title: 'HERITAGE\nStyling',
-      button: { label: "Shop Men's Outerwear", link: "/collections/mens-outerwear", style: "bg-[#a58c69] text-white hover:bg-[#684f40]" }
+      button: { label: "Shop Men's ", link: "/collections/mens", style: "bg-[#a58c69] text-white hover:bg-[#684f40]" }
     },
     rightPanel: {
       img: S3_RIGHT_IMG,
       title: 'Vintage-inspired\nlayers',
-      button: { label: "Shop Women's Outerwear", link: "/collections/womens-outerwear", style: "bg-[#a58c69] text-white hover:bg-[#684f40]" }
+      button: { label: "Shop Women's ", link: "/collections/womens", style: "bg-[#a58c69] text-white hover:bg-[#684f40]" }
     }
   },
   {
     id: 4,
-    type: 'full',
-    imgDesktop: S4_DESKTOP,
-    imgMobile: S4_MOBILE,
-    title: 'ACTIVE SEASON. 2',
-    subtitle: '',
-    position: 'items-end justify-start pb-24 lg:pb-32 pl-6 lg:pl-16 text-left',
-    overlay: 'bg-gradient-to-t from-black/60 via-black/20 to-transparent',
-    buttons: [
-      { label: "Shop Now", link: "/collections/activewear", style: "bg-[#a58c69] text-white hover:bg-[#8f6f4a]" },
-      { label: "Explore More", link: "/collections/activewear-explore", style: "bg-white text-black hover:opacity-80" }
-    ]
-  },
-  {
-    id: 5,
     type: 'full',
     imgDesktop: S5_DESKTOP,
     imgMobile: S5_MOBILE,
@@ -94,7 +68,7 @@ const sliderData = [
     position: 'items-center justify-center text-center px-4',
     overlay: 'bg-black/30', // Simple dark overlay for readability
     buttons: [
-      { label: "Sign up", link: "/pages/rewards", style: "bg-[#a58c69] text-white hover:bg-[#684f40]" }
+      { label: "Sign up", link: "/account/login", style: "bg-[#a58c69] text-white hover:bg-[#684f40]" }
     ]
   }
 ];
@@ -153,13 +127,13 @@ export default function HeroSlider() {
                     
                     <div className={`flex flex-col sm:flex-row gap-4 mt-2 ${slide.position.includes('center') ? 'justify-center mx-auto' : ''}`}>
                       {slide.buttons.map((btn, btnIdx) => (
-                        <a 
+                        <Link 
                           key={btnIdx} 
-                          href={btn.link}
+                          to={btn.link}
                           className={`font-central font-bold uppercase tracking-widest text-xs px-6 py-4 md:px-8 rounded-sm transition-colors duration-300 w-full sm:w-auto text-center ${btn.style}`}
                         >
                           {btn.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -179,9 +153,9 @@ export default function HeroSlider() {
                     <h2 className="font-central text-4xl md:text-6xl font-bold text-white uppercase leading-none whitespace-pre-line">
                       {slide.leftPanel.title}
                     </h2>
-                    <a href={slide.leftPanel.button.link} className={`font-central font-bold uppercase tracking-widest text-xs px-6 py-4 rounded-sm transition-colors w-fit text-center ${slide.leftPanel.button.style}`}>
+                    <Link to={slide.leftPanel.button.link} className={`font-central font-bold uppercase tracking-widest text-xs px-6 py-4 rounded-sm transition-colors w-fit text-center ${slide.leftPanel.button.style}`}>
                       {slide.leftPanel.button.label}
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -193,9 +167,9 @@ export default function HeroSlider() {
                     <h2 className="font-central text-4xl md:text-6xl font-bold text-white uppercase leading-none whitespace-pre-line">
                       {slide.rightPanel.title}
                     </h2>
-                    <a href={slide.rightPanel.button.link} className={`font-central font-bold uppercase tracking-widest text-xs px-6 py-4 rounded-sm transition-colors w-fit text-center ${slide.rightPanel.button.style}`}>
+                    <Link to={slide.rightPanel.button.link} className={`font-central font-bold uppercase tracking-widest text-xs px-6 py-4 rounded-sm transition-colors w-fit text-center ${slide.rightPanel.button.style}`}>
                       {slide.rightPanel.button.label}
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -230,3 +204,12 @@ export default function HeroSlider() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
