@@ -3,28 +3,28 @@ import React, { useState } from 'react';
 const featuresData = [
   {
     title: "15% OFF\nFIRST ORDER",
-    shortDesc: "Subscribe to our mailing\nlist\nfor 15% off your first\norder",
-    modalDesc: "Join our community and get 15% off your first purchase. Be the first to know about new drops, exclusive sales, and P&Co news.",
+    shortDesc: "Subscribe to our mailing\nlist\nfor 15% off your first\norder T&C",
+    modalDesc: "Join our community and get 5% off your first purchase. Be the first to know about new drops, exclusive sales, and brand news.",
     linkText: "SIGN UP",
     linkUrl: "#"
   },
   {
     title: "EASY RETURNS\n& INSTANT EXCHANGES",
-    shortDesc: "Get your new items sent\nout straight away on UK &\nEU orders",
-    modalDesc: "We now offer instant exchanges for UK & EU customers. If your item is the incorrect size you can get your new item sent out straight away before you send off your unwanted item, so you won't have to wait to get the right item.",
+    shortDesc: "Get your new items sent\nout straight away across\nPakistan",
+    modalDesc: "We now offer instant exchanges for our customers across Pakistan. If your item is the incorrect size, you can get your new item sent out straight away before you send off your unwanted item, so you won't have to wait to get the right item.",
     linkText: "FIND OUT MORE →",
     linkUrl: "#"
   },
   {
-    title: "FREE WORLDWIDE\nDELIVERY",
-    shortDesc: "Free worldwide delivery on\nall orders over £70",
-    modalDesc: "We offer free tracked shipping on all UK, US, EU, and ROW orders over a certain threshold. Check our shipping page for specific rates to your country.",
+    title: "FREE NATIONWIDE\nDELIVERY",
+    shortDesc: "Free delivery across Pakistan\non all orders over Rs. 5,000",
+    modalDesc: "We offer free tracked shipping on all nationwide orders over Rs. 5,000. Check our shipping page for specific delivery timelines to your city.",
     linkText: "SHIPPING INFO →",
     linkUrl: "#"
   },
   {
     title: "30 DAY\nRETURNS",
-    shortDesc: "Orders are eligible for\nreturns within 30 days of\ndispatch from our UK\nwarehouse",
+    shortDesc: "Orders are eligible for\nreturns within 30 days of\ndispatch from our Bahawalpur\nwarehouse",
     modalDesc: "Not quite right? We accept returns on all unworn items within 30 days of dispatch. Please ensure all original tags are attached.",
     linkText: "RETURNS PORTAL →",
     linkUrl: "#"

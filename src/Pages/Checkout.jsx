@@ -600,6 +600,7 @@ export default function Checkout() {
                 <div className="flex flex-col gap-3">
                   <select name="country" value={formData.country} onChange={handleInputChange} className="w-full p-3 border border-gray-300 rounded-[4px] bg-white cursor-pointer outline-none text-nav-dark" >
                     <option value="Pakistan">Pakistan</option>
+                 
                    
                   </select>
                   <div className="grid grid-cols-2 gap-3">

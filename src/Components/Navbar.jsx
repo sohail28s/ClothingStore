@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* Changed text-white to text-nav-dark */}
         <div className="flex items-center justify-end flex-1 gap-4 lg:gap-6 font-central text-sm uppercase tracking-wider font-medium mt-1 text-nav-dark">
         
-          <button onClick={() => setIsSearchOpen(!isSearchOpen)} id="search-toggle-btn" className="hidden lg:flex items-center gap-2 hover:opacity-60 transition-opacity pb-1 border-b-2 border-transparent hover:border-nav-dark">
+          <button onClick={() => setIsSearchOpen(!isSearchOpen)} id="search-toggle-btn" className="hidden lg:flex items-center gap-2 hover:opacity-60 transition-opacity pb-0  border-transparent hover:border-nav-dark">
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
               {isSearchOpen ? 
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /> : 

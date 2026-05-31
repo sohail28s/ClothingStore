@@ -50,7 +50,7 @@ export default function Footer() {
 
         <div className="absolute inset-0 bg-black z-10" />
 
-        <div className="relative z-20 max-w-[1680px] mx-auto px-4 lg:px-8">
+        <div className="relative z-20  mx-auto px-4 lg:px-8">
 
           <div className="py-5 opacity-90 px-0">
             <Marquee text="A MINDSET FOR PURPOSEFUL LIVING" speed={60} />

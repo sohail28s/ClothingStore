@@ -36,7 +36,7 @@ export default function PromoBlock() {
 
         {/* Link with subtle arrow SVG to match the reference */}
         <a 
-          href="/blogs/lookbook" 
+          href="#" 
           className="group inline-flex items-center gap-2 font-central font-bold text-xs uppercase tracking-[0.2em] text-[#a58c69] hover:text-nav-dark transition-colors duration-300 border-b border-transparent hover:border-nav-dark pb-1"
         >
           View The Lookbook
