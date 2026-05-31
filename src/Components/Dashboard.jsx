@@ -44,7 +44,7 @@
 //   useEffect(() => {
 //     if (currentUser) {
 //       // 1. Load Orders (Still fake local storage for now)
-//       const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+//       const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
 //       const myOrders = allOrders.filter(order => order.customerId === currentUser._id || currentUser.id);
 //       setUserOrders(myOrders);
 
@@ -492,7 +492,7 @@ export default function Dashboard() {
   useEffect(() => {
     if (currentUser) {
       // 1. Load Orders
-      const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+      const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
       const myOrders = allOrders.filter(order => order.customerId === currentUser._id || currentUser.id);
       setUserOrders(myOrders);
 

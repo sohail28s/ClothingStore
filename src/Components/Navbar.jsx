@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* Center Logo */}
         <a href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex-shrink-0">
           {/* Changed text-white to text-nav-dark */}
-          <span className="font-central text-2xl tracking-[0.2em] font-bold uppercase text-nav-dark">P&Co</span>
+           <img className='w-52' src="/Images/Hero/logo.png" alt="" />
         </a>
 
         {/* Right Side Icons */}

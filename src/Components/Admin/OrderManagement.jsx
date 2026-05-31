@@ -8,7 +8,7 @@
 
 //   // Load orders from LocalStorage
 //   useEffect(() => {
-//     const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+//     const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
 //     // Sort so newest orders are at the top
 //     const sortedOrders = allOrders.sort((a, b) => new Date(b.date) - new Date(a.date));
 //     setOrders(sortedOrders);
@@ -23,12 +23,12 @@
 //   // Handle Status Update
 //   const handleStatusChange = (orderId, newStatus) => {
 //     // 1. Update in Local Storage
-//     const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+//     const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
 //     const orderIndex = allOrders.findIndex(o => o.orderId === orderId);
     
 //     if (orderIndex > -1) {
 //       allOrders[orderIndex].status = newStatus;
-//       localStorage.setItem('pandco_orders', JSON.stringify(allOrders));
+//       localStorage.setItem('outrey_orders', JSON.stringify(allOrders));
 //     }
 
 //     // 2. Update Local State

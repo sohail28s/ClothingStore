@@ -12,7 +12,7 @@ export default function PromoBlock() {
       */}
       <div className="relative w-full h-[400px] lg:h-[600px] order-1">
         <img 
-          src="https://pand.co/cdn/shop/files/Spring-4-desktop_0020_DSCF7604_b839eb9d-056d-476c-81c6-1d0b75b76a95.jpg?crop=center&v=1774449884&width=1440" 
+          src="/Images/Hero/pexels-arina-krasnikova-5418927.jpg" 
           alt="Spring Collection" 
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading="lazy"

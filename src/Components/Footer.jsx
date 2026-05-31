@@ -48,21 +48,11 @@ export default function Footer() {
 
       <div className="relative w-full overflow-hidden">
 
-        <img
-          src="https://pand.co/cdn/shop/files/Spring-4-desktop_0020_DSCF7604.jpg?v=1774449882&width=1440"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover hidden md:block z-0"
-        />
-        <img
-          src="https://pand.co/cdn/shop/files/DROP3ECOMSIZED_0061_LeonSpring2-685_0000_DSCF2510.jpg?v=1774450024&width=430"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover md:hidden z-0"
-        />
-        <div className="absolute inset-0 bg-black/65 z-10" />
+        <div className="absolute inset-0 bg-black z-10" />
 
         <div className="relative z-20 max-w-[1680px] mx-auto px-4 lg:px-8">
 
-          <div className="py-5 opacity-90">
+          <div className="py-5 opacity-90 px-0">
             <Marquee text="A MINDSET FOR PURPOSEFUL LIVING" speed={60} />
           </div>
 
@@ -170,7 +160,7 @@ export default function Footer() {
 
               <div className="flex flex-col gap-2">
                 <h6 className="font-central text-[9px] uppercase tracking-widest opacity-40 font-bold mb-0.5">The Store</h6>
-                <p className="text-[11px] tracking-wider opacity-80 uppercase leading-relaxed">103 Commercial St,<br />F11 Islamabad</p>
+                <p className="text-[11px] tracking-wider opacity-80 uppercase leading-relaxed">103 Commercial St,<br />Model Town Bahawalpur</p>
                 <p className="text-[11px] tracking-wider opacity-80 uppercase leading-relaxed mt-1.5">Mon-Fri: 11-7<br />Sat: 10-7<br />Sun: 11-5:30</p>
               </div>
 

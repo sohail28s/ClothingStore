@@ -39,7 +39,7 @@
 //       if (!response.ok) throw new Error(result.message || 'Failed to fetch customers');
 
 //       // Continue to pull orders from localStorage to calculate metrics until an Orders API is built
-//       const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+//       const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
       
 //       const enrichedUsers = result.data.map(user => {
 //         // Note: MongoDB uses _id
@@ -97,7 +97,7 @@
 
 //   const handleViewCustomer = (customer) => {
 //     setSelectedCustomer(customer);
-//     const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+//     const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
 //     const userOrders = allOrders.filter(o => o.customerId === customer._id);
 //     setCustomerOrders(userOrders.sort((a, b) => new Date(b.date) - new Date(a.date)));
 //   };
@@ -538,7 +538,7 @@
 //       if (!response.ok) throw new Error(result.message || 'Failed to fetch customers');
 
 //       // Continue to pull orders from localStorage to calculate metrics until an Orders API is built
-//       const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+//       const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
       
 //       const enrichedUsers = result.data.map(user => {
 //         const userOrders = allOrders.filter(o => o.customerId === user._id);
@@ -593,7 +593,7 @@
 
 //   const handleViewCustomer = (customer) => {
 //     setSelectedCustomer(customer);
-//     const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+//     const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
 //     const userOrders = allOrders.filter(o => o.customerId === customer._id);
 //     setCustomerOrders(userOrders.sort((a, b) => new Date(b.date) - new Date(a.date)));
 //   };
@@ -1062,7 +1062,7 @@
 
 //       if (!response.ok) throw new Error(result.message || 'Failed to fetch customers');
 
-//       const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+//       const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
       
 //       const enrichedUsers = result.data.map(user => {
 //         const userOrders = allOrders.filter(o => o.customerId === user._id);
@@ -1117,7 +1117,7 @@
 
 //   const handleViewCustomer = (customer) => {
 //     setSelectedCustomer(customer);
-//     const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+//     const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
 //     const userOrders = allOrders.filter(o => o.customerId === customer._id);
 //     setCustomerOrders(userOrders.sort((a, b) => new Date(b.date) - new Date(a.date)));
 //   };
@@ -1636,7 +1636,7 @@ export default function CustomerManagement() {
 
       if (!response.ok) throw new Error(result.message || 'Failed to fetch customers');
 
-      const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+      const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
       
       const enrichedUsers = result.data.map(user => {
         const userOrders = allOrders.filter(o => o.customerId === user._id);
@@ -1691,7 +1691,7 @@ export default function CustomerManagement() {
 
   const handleViewCustomer = (customer) => {
     setSelectedCustomer(customer);
-    const allOrders = JSON.parse(localStorage.getItem('pandco_orders')) || [];
+    const allOrders = JSON.parse(localStorage.getItem('outrey_orders')) || [];
     const userOrders = allOrders.filter(o => o.customerId === customer._id);
     setCustomerOrders(userOrders.sort((a, b) => new Date(b.date) - new Date(a.date)));
   };

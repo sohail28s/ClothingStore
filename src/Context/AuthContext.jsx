@@ -6,11 +6,11 @@ export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   // 1. Initialize token from LocalStorage
-  const [token, setToken] = useState(() => localStorage.getItem('pandco_token') || null);
+  const [token, setToken] = useState(() => localStorage.getItem('outrey_token') || null);
   
   // 2. Initialize the full user profile from LocalStorage so it survives page refreshes
   const [currentUser, setCurrentUser] = useState(() => {
-    const savedUser = localStorage.getItem('pandco_user');
+    const savedUser = localStorage.getItem('outrey_user');
     return savedUser ? JSON.parse(savedUser) : null;
   });
 
@@ -37,8 +37,8 @@ export const AuthProvider = ({ children }) => {
     setToken(newToken);
     setCurrentUser(userData); // Save to React State
     
-    localStorage.setItem('pandco_token', newToken);
-    localStorage.setItem('pandco_user', JSON.stringify(userData)); // Save to browser storage
+    localStorage.setItem('outrey_token', newToken);
+    localStorage.setItem('outrey_user', JSON.stringify(userData)); // Save to browser storage
   };
 
   // --- LOGOUT FUNCTION ---
@@ -47,8 +47,8 @@ export const AuthProvider = ({ children }) => {
     setUserId(null);
     setCurrentUser(null);
     
-    localStorage.removeItem('pandco_token');
-    localStorage.removeItem('pandco_user');
+    localStorage.removeItem('outrey_token');
+    localStorage.removeItem('outrey_user');
   };
 
   const isAuthenticated = !!token;

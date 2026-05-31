@@ -9,7 +9,7 @@ export default function SettingsManagement() {
   // Static state so the inputs are actually interactive for your demo
   const [formData, setFormData] = useState({
     storeName: 'P&Co Clone',
-    supportEmail: 'support@pandco.com',
+    supportEmail: 'support@outrey.com',
     phone: '+92 300 1234567',
     address: '123 Fashion Street, Lahore',
     shippingRate: '300',
@@ -177,7 +177,7 @@ export default function SettingsManagement() {
               <div className="flex flex-col gap-4">
                 <div>
                   <label className="font-central text-[10px] uppercase tracking-widest font-bold text-gray-500 block mb-2">Current Admin Email</label>
-                  <input type="email" value="admin@pandco.com" disabled className="w-full p-3 border border-gray-200 outline-none bg-gray-100 text-gray-500 font-ballinger text-sm cursor-not-allowed" />
+                  <input type="email" value="admin@outrey.com" disabled className="w-full p-3 border border-gray-200 outline-none bg-gray-100 text-gray-500 font-ballinger text-sm cursor-not-allowed" />
                 </div>
                 <div className="grid grid-cols-2 gap-4 mt-2">
                   <div>

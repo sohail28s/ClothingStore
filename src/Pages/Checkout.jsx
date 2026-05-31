@@ -38,9 +38,9 @@ export default function Checkout() {
     nameOnCard: ''
   });
 
-  // Smart Auto-fill: Checks AuthContext first, then falls back to 'pandco_user' in LocalStorage
+  // Smart Auto-fill: Checks AuthContext first, then falls back to 'outrey_user' in LocalStorage
   useEffect(() => {
-    const localUserStr = localStorage.getItem('pandco_user');
+    const localUserStr = localStorage.getItem('outrey_user');
     const localUser = localUserStr ? JSON.parse(localUserStr) : null;
     const activeUser = currentUser || localUser;
 
@@ -132,8 +132,8 @@ export default function Checkout() {
         };
       }
 
-      // 4. FETCH THE EXACT PANDCO TOKEN
-      const userToken = localStorage.getItem('pandco_token');
+      // 4. FETCH THE EXACT outrey TOKEN
+      const userToken = localStorage.getItem('outrey_token');
       
       console.log("DEBUG - Token being sent to backend:", userToken);
 
@@ -145,7 +145,7 @@ export default function Checkout() {
       if (userToken) {
         headers['Authorization'] = `Bearer ${userToken}`;
       } else {
-        alert("Authentication Error: Missing 'pandco_token'. Please log in again.");
+        alert("Authentication Error: Missing 'outrey_token'. Please log in again.");
         setIsSubmitting(false);
         return; 
       }
@@ -198,7 +198,7 @@ export default function Checkout() {
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <h2 className="font-central text-lg font-bold uppercase tracking-wider">Contact</h2>
-                  {(currentUser || localStorage.getItem('pandco_user')) && (
+                  {(currentUser || localStorage.getItem('outrey_user')) && (
                     <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Logged in</span>
                   )}
                 </div>

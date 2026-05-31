@@ -8,13 +8,13 @@ export const CartProvider = ({ children }) => {
 
   // Initialize state from LocalStorage
   const [cartItems, setCartItems] = useState(() => {
-    const savedCart = localStorage.getItem('pandco_cart');
+    const savedCart = localStorage.getItem('outrey_cart');
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
   // Save to LocalStorage whenever the cart changes
   useEffect(() => {
-    localStorage.setItem('pandco_cart', JSON.stringify(cartItems));
+    localStorage.setItem('outrey_cart', JSON.stringify(cartItems));
   }, [cartItems]);
 
   const toggleCart = () => setIsCartOpen(!isCartOpen);
