@@ -50,9 +50,9 @@ export default function App() {
               <Route 
                 path="/admin" 
                 element={
-                  <ProtectedRoute>
+  
                     <AdminDashboard />
-                  </ProtectedRoute>
+              
                 } 
               />
               
