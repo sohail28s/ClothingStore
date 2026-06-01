@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
  // Your new layout file
+ 
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer'; 
 import MainLayout from './Layout/Layout'
