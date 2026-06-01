@@ -10,9 +10,9 @@ export default function TestAPI() {
     setError(null);
     
     try {
-      console.log("Fetching from http://localhost:5000/api/products...");
+      console.log("Fetching from https://app-backend-msic.onrender.com/api/products...");
       
-      const response = await fetch('http://localhost:5000/api/products');
+      const response = await fetch('https://app-backend-msic.onrender.com/api/products');
       
       // Check if the network request itself failed (e.g., 404, 500)
       if (!response.ok) {

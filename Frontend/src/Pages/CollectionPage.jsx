@@ -61,7 +61,7 @@ export default function CollectionPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/products');
+        const response = await fetch('https://app-backend-msic.onrender.com/api/products');
         const result = await response.json();
         
         if (result.success) {
@@ -80,7 +80,7 @@ export default function CollectionPage() {
               name: v.colorName,
               hex: v.hexCode,
               images: v.images && v.images.length > 0 
-                ? v.images.map(img => ({ url: `http://localhost:5000/${img.replace(/\\/g, '/')}` })) 
+                ? v.images.map(img => ({ url: `https://app-backend-msic.onrender.com/${img.replace(/\\/g, '/')}` })) 
                 : [{ url: 'https://via.placeholder.com/400x500?text=No+Image' }],
               sizes: v.sizes.map(s => ({ size: s.size.toString().toUpperCase(), stock: s.stock, id: s._id }))
             }))

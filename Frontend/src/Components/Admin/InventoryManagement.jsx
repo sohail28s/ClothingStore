@@ -63,7 +63,7 @@ export default function InventoryManagement() {
     try {
       const token = localStorage.getItem('admin_token');
       // Passing the token ensures the backend sends Draft products too!
-      const response = await fetch('http://localhost:5000/api/products', {
+      const response = await fetch('https://app-backend-msic.onrender.com/api/products', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const result = await response.json();
@@ -104,7 +104,7 @@ export default function InventoryManagement() {
       const token = localStorage.getItem('admin_token');
       const newStock = stockInputs[sku];
 
-      const response = await fetch(`http://localhost:5000/api/products/${productId}/variants/${variantId}/sizes/${sizeId}/stock`, {
+      const response = await fetch(`https://app-backend-msic.onrender.com/api/products/${productId}/variants/${variantId}/sizes/${sizeId}/stock`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
         body: JSON.stringify({ stock: newStock })
@@ -125,7 +125,7 @@ export default function InventoryManagement() {
   const handleStatusChange = async (productId, newStatus) => {
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch(`http://localhost:5000/api/products/${productId}/status`, {
+      const response = await fetch(`https://app-backend-msic.onrender.com/api/products/${productId}/status`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
         body: JSON.stringify({ status: newStatus })
@@ -147,7 +147,7 @@ export default function InventoryManagement() {
     
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch(`http://localhost:5000/api/products/${productId}`, {
+      const response = await fetch(`https://app-backend-msic.onrender.com/api/products/${productId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -170,7 +170,7 @@ export default function InventoryManagement() {
       const images = [null, null, null];
       if (v.images) {
         v.images.forEach((img, i) => {
-          if (i < 3) images[i] = { file: null, preview: `http://localhost:5000/${img.replace(/\\/g, '/')}`, original: img };
+          if (i < 3) images[i] = { file: null, preview: `https://app-backend-msic.onrender.com/${img.replace(/\\/g, '/')}`, original: img };
         });
       }
       return {
@@ -251,7 +251,7 @@ export default function InventoryManagement() {
         });
       });
 
-      const response = await fetch(`http://localhost:5000/api/products/${formData._id}`, {
+      const response = await fetch(`https://app-backend-msic.onrender.com/api/products/${formData._id}`, {
         method: 'PUT',
         headers: { 'Authorization': `Bearer ${token}` },
         body: formPayload
@@ -556,7 +556,7 @@ export default function InventoryManagement() {
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-white border border-nav-dark shrink-0 p-1">
                     {product.variants[0]?.images[0] ? (
-                      <img src={`http://localhost:5000/${product.variants[0].images[0].replace(/\\/g, '/')}`} alt={product.name} className="w-full h-full object-cover" />
+                      <img src={`https://app-backend-msic.onrender.com/${product.variants[0].images[0].replace(/\\/g, '/')}`} alt={product.name} className="w-full h-full object-cover" />
                     ) : (
                       <Package className="w-full h-full p-2 text-gray-300" />
                     )}

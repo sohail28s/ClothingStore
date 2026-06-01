@@ -28,7 +28,7 @@ export default function AdminDashboard() {
     setIsLoggingIn(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/admin/login', {
+      const response = await fetch('https://app-backend-msic.onrender.com/api/admin/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: loginEmail, password: loginPassword }),
@@ -67,14 +67,14 @@ export default function AdminDashboard() {
           const headers = { 'Authorization': `Bearer ${token}` };
 
           // 1. Fetch Stats for KPI Cards
-          const statsRes = await fetch('http://localhost:5000/api/admin/dashboard/stats', { headers });
+          const statsRes = await fetch('https://app-backend-msic.onrender.com/api/admin/dashboard/stats', { headers });
           const statsResult = await statsRes.json();
           if (statsResult.status === 'Success') {
             setMetrics(statsResult.data);
           }
 
           // 2. Fetch Recent Orders for the Table
-          const ordersRes = await fetch('http://localhost:5000/api/orders', { headers });
+          const ordersRes = await fetch('https://app-backend-msic.onrender.com/api/orders', { headers });
           const ordersResult = await ordersRes.json();
 
           if (ordersResult.status === 'Success' || ordersResult.success) {

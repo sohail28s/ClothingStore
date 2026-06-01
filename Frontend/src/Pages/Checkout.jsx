@@ -151,7 +151,7 @@
 //       }
 
 //       // 5. Send POST request to Database
-//       const response = await fetch('http://localhost:5000/api/orders', {
+//       const response = await fetch('https://app-backend-msic.onrender.com/api/orders', {
 //         method: 'POST',
 //         headers: headers,
 //         body: JSON.stringify(payload)
@@ -538,7 +538,7 @@ export default function Checkout() {
       }
 
       // 5. Send POST request to Database
-      const response = await fetch('http://localhost:5000/api/orders', {
+      const response = await fetch('https://app-backend-msic.onrender.com/api/orders', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(payload)

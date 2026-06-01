@@ -31,7 +31,7 @@
 //       const token = localStorage.getItem('admin_token');
 //       if (!token) return;
 
-//       const response = await fetch('http://localhost:5000/api/admin/customers', {
+//       const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customers', {
 //         headers: { 'Authorization': `Bearer ${token}` }
 //       });
 //       const result = await response.json();
@@ -71,7 +71,7 @@
     
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch(`http://localhost:5000/api/admin/customer/${userId}/status`, {
+//       const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${userId}/status`, {
 //         method: 'PATCH',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -158,7 +158,7 @@
 
 //       if (isEditing) {
 //         // Send PUT request to update customer
-//         const response = await fetch(`http://localhost:5000/api/admin/customer/${selectedCustomer._id}`, {
+//         const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
 //           method: 'PUT',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -530,7 +530,7 @@
 //       const token = localStorage.getItem('admin_token');
 //       if (!token) return;
 
-//       const response = await fetch('http://localhost:5000/api/admin/customers', {
+//       const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customers', {
 //         headers: { 'Authorization': `Bearer ${token}` }
 //       });
 //       const result = await response.json();
@@ -568,7 +568,7 @@
     
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch(`http://localhost:5000/api/admin/customer/${userId}/status`, {
+//       const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${userId}/status`, {
 //         method: 'PATCH',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -659,7 +659,7 @@
 //           postalCode: formData.postcode
 //         };
 
-//         const response = await fetch(`http://localhost:5000/api/admin/customer/${selectedCustomer._id}`, {
+//         const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
 //           method: 'PUT',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -681,7 +681,7 @@
 
 //       } else {
 //         // --- POST: ADD NEW CUSTOMER ---
-//         const response = await fetch('http://localhost:5000/api/admin/customer', {
+//         const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customer', {
 //           method: 'POST',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -1055,7 +1055,7 @@
 //       const token = localStorage.getItem('admin_token');
 //       if (!token) return;
 
-//       const response = await fetch('http://localhost:5000/api/admin/customers', {
+//       const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customers', {
 //         headers: { 'Authorization': `Bearer ${token}` }
 //       });
 //       const result = await response.json();
@@ -1092,7 +1092,7 @@
     
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch(`http://localhost:5000/api/admin/customer/${userId}/status`, {
+//       const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${userId}/status`, {
 //         method: 'PATCH',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -1192,7 +1192,7 @@
 
 //       if (isEditing) {
 //         // --- PUT: EDIT EXISTING CUSTOMER ---
-//         const response = await fetch(`http://localhost:5000/api/admin/customer/${selectedCustomer._id}`, {
+//         const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
 //           method: 'PUT',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -1218,7 +1218,7 @@
 //         // Your specific POST API expects flat address variables for creation
 //         const firstAddress = formData.addresses[0];
         
-//         const response = await fetch('http://localhost:5000/api/admin/customer', {
+//         const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customer', {
 //           method: 'POST',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -1629,7 +1629,7 @@ export default function CustomerManagement() {
       const token = localStorage.getItem('admin_token');
       if (!token) return;
 
-      const response = await fetch('http://localhost:5000/api/admin/customers', {
+      const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customers', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const result = await response.json();
@@ -1666,7 +1666,7 @@ export default function CustomerManagement() {
     
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch(`http://localhost:5000/api/admin/customer/${userId}/status`, {
+      const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${userId}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -1769,7 +1769,7 @@ export default function CustomerManagement() {
 
   //     if (isEditing) {
   //       // --- PUT: EDIT EXISTING CUSTOMER (QUICK FIX) ---
-  //       const response = await fetch(`http://localhost:5000/api/admin/customer/${selectedCustomer._id}`, {
+  //       const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
   //         method: 'PUT',
   //         headers: {
   //           'Content-Type': 'application/json',
@@ -1796,7 +1796,7 @@ export default function CustomerManagement() {
 
   //     } else {
   //       // --- POST: ADD NEW CUSTOMER ---
-  //       const response = await fetch('http://localhost:5000/api/admin/customer', {
+  //       const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customer', {
   //         method: 'POST',
   //         headers: {
   //           'Content-Type': 'application/json',
@@ -1853,7 +1853,7 @@ export default function CustomerManagement() {
 
       if (isEditing) {
         // --- PUT: EDIT EXISTING CUSTOMER ---
-        const response = await fetch(`http://localhost:5000/api/admin/customer/${selectedCustomer._id}`, {
+        const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -1881,7 +1881,7 @@ export default function CustomerManagement() {
         // --- POST: ADD NEW CUSTOMER ---
         const firstAddress = formData.addresses[0] || {};
         
-        const response = await fetch('http://localhost:5000/api/admin/customer', {
+        const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customer', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

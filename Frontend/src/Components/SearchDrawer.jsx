@@ -50,7 +50,7 @@ export default function SearchDrawer({ isOpen, onClose }) {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5000/api/products');
+      const response = await fetch('https://app-backend-msic.onrender.com/api/products');
       if (!response.ok) throw new Error('Failed to fetch products');
       
       const jsonResponse = await response.json();
@@ -136,7 +136,7 @@ export default function SearchDrawer({ isOpen, onClose }) {
                     imagePath = product.variants[0].images[0];
                   }
 
-                  const backendUrl = 'http://localhost:5000/';
+                  const backendUrl = 'https://app-backend-msic.onrender.com/';
                   const productImage = imagePath ? (imagePath.startsWith('http') ? imagePath : `${backendUrl}${imagePath}`) : null;
 
                   return (

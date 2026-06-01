@@ -38,7 +38,7 @@ export default function ProductCard({ product }) {
     setIsWishlisted(!isWishlisted); // Instantly fill the heart
 
     try {
-      const response = await fetch('http://localhost:5000/api/user/wishlist/toggle', {
+      const response = await fetch('https://app-backend-msic.onrender.com/api/user/wishlist/toggle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

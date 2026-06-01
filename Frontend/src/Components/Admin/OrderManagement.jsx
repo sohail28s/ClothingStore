@@ -240,7 +240,7 @@
 //     setIsLoading(true);
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch('http://localhost:5000/api/orders', {
+//       const response = await fetch('https://app-backend-msic.onrender.com/api/orders', {
 //         headers: { 'Authorization': `Bearer ${token}` }
 //       });
 //       const result = await response.json();
@@ -289,7 +289,7 @@
 //   const handleStatusChange = async (dbOrderId, newStatus) => {
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch(`http://localhost:5000/api/orders/${dbOrderId}/status`, {
+//       const response = await fetch(`https://app-backend-msic.onrender.com/api/orders/${dbOrderId}/status`, {
 //         method: 'PATCH',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -532,7 +532,7 @@ export default function OrderManagement() {
     setIsLoading(true);
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch('http://localhost:5000/api/orders', {
+      const response = await fetch('https://app-backend-msic.onrender.com/api/orders', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const result = await response.json();
@@ -569,7 +569,7 @@ export default function OrderManagement() {
     setIsLoadingDetails(true);
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch(`http://localhost:5000/api/orders/${dbOrderId}`, {
+      const response = await fetch(`https://app-backend-msic.onrender.com/api/orders/${dbOrderId}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const result = await response.json();
@@ -604,7 +604,7 @@ export default function OrderManagement() {
             size: item.size,
             quantity: item.quantity,
             price: item.price,
-            image: item.image ? `http://localhost:5000/${item.image.replace(/\\/g, '/')}` : null
+            image: item.image ? `https://app-backend-msic.onrender.com/${item.image.replace(/\\/g, '/')}` : null
           }))
         });
       }
@@ -628,7 +628,7 @@ export default function OrderManagement() {
     
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch(`http://localhost:5000/api/orders/${dbOrderId}/status`, {
+      const response = await fetch(`https://app-backend-msic.onrender.com/api/orders/${dbOrderId}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

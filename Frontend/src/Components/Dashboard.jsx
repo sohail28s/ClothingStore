@@ -76,7 +76,7 @@
 
 //     try {
 //       // 1. PUT request to update user profile
-//       const response = await fetch('http://localhost:5000/api/user/profile', {
+//       const response = await fetch('https://app-backend-msic.onrender.com/api/user/profile', {
 //         method: 'PUT',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -131,7 +131,7 @@
 //     setIsSavingAddress(true);
 
 //     try {
-//       const response = await fetch('http://localhost:5000/api/user/address', {
+//       const response = await fetch('https://app-backend-msic.onrender.com/api/user/address', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -560,7 +560,7 @@
 //       const fetchMyOrders = async () => {
 //         setIsLoadingOrders(true);
 //         try {
-//           const response = await fetch('http://localhost:5000/api/orders/my-orders', {
+//           const response = await fetch('https://app-backend-msic.onrender.com/api/orders/my-orders', {
 //             method: 'GET',
 //             headers: {
 //               'Content-Type': 'application/json',
@@ -612,7 +612,7 @@
 //     e.preventDefault();
 //     setIsSavingAccount(true);
 //     try {
-//       const response = await fetch('http://localhost:5000/api/user/profile', {
+//       const response = await fetch('https://app-backend-msic.onrender.com/api/user/profile', {
 //         method: 'PUT',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -650,7 +650,7 @@
 //     e.preventDefault();
 //     setIsSavingAddress(true);
 //     try {
-//       const response = await fetch('http://localhost:5000/api/user/address', {
+//       const response = await fetch('https://app-backend-msic.onrender.com/api/user/address', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -779,7 +779,7 @@
 //                               order.items.map((item, idx) => {
                                 
 //                                 // FIX 2: Added the localhost prefix to the image URL just like the Admin side
-//                                 const imageUrl = item.image ? `http://localhost:5000/${item.image.replace(/\\/g, '/')}` : "https://via.placeholder.com/150";
+//                                 const imageUrl = item.image ? `https://app-backend-msic.onrender.com/${item.image.replace(/\\/g, '/')}` : "https://via.placeholder.com/150";
 
 //                                 return (
 //                                   <div key={idx} className="flex gap-4 md:gap-6 pb-6 border-b border-gray-100 last:border-0 last:pb-0">
@@ -1072,7 +1072,7 @@ export default function Dashboard() {
       const fetchMyOrders = async () => {
         setIsLoadingOrders(true);
         try {
-          const response = await fetch('http://localhost:5000/api/orders/my-orders', {
+          const response = await fetch('https://app-backend-msic.onrender.com/api/orders/my-orders', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -1094,7 +1094,7 @@ export default function Dashboard() {
       const fetchMyWishlist = async () => {
         setIsLoadingWishlist(true);
         try {
-          const response = await fetch('http://localhost:5000/api/user/wishlist', {
+          const response = await fetch('https://app-backend-msic.onrender.com/api/user/wishlist', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -1114,7 +1114,7 @@ export default function Dashboard() {
                 name: v.colorName,
                 hex: v.hexCode,
                 images: v.images && v.images.length > 0 
-                  ? v.images.map(img => ({ url: img.startsWith('http') ? img : `http://localhost:5000/${img.replace(/\\/g, '/')}` }))
+                  ? v.images.map(img => ({ url: img.startsWith('http') ? img : `https://app-backend-msic.onrender.com/${img.replace(/\\/g, '/')}` }))
                   : [{ url: 'https://via.placeholder.com/400x500?text=No+Image' }]
               }))
             }));
@@ -1162,7 +1162,7 @@ export default function Dashboard() {
     e.preventDefault();
     setIsSavingAccount(true);
     try {
-      const response = await fetch('http://localhost:5000/api/user/profile', {
+      const response = await fetch('https://app-backend-msic.onrender.com/api/user/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -1200,7 +1200,7 @@ export default function Dashboard() {
     e.preventDefault();
     setIsSavingAddress(true);
     try {
-      const response = await fetch('http://localhost:5000/api/user/address', {
+      const response = await fetch('https://app-backend-msic.onrender.com/api/user/address', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1320,7 +1320,7 @@ export default function Dashboard() {
                           <div className="p-4 md:p-6 flex flex-col gap-6">
                             {order.items && order.items.length > 0 ? (
                               order.items.map((item, idx) => {
-                                const imageUrl = item.image ? `http://localhost:5000/${item.image.replace(/\\/g, '/')}` : "https://via.placeholder.com/150";
+                                const imageUrl = item.image ? `https://app-backend-msic.onrender.com/${item.image.replace(/\\/g, '/')}` : "https://via.placeholder.com/150";
                                 return (
                                   <div key={idx} className="flex gap-4 md:gap-6 pb-6 border-b border-gray-100 last:border-0 last:pb-0">
                                     <div className="w-[80px] md:w-[120px] aspect-[4/5] bg-gray-100 border border-gray-200 shrink-0">

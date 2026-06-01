@@ -194,7 +194,7 @@ export default function AddProduct({ onBack }) {
 
       // Send the request!
       // Notice we DO NOT set 'Content-Type'. The browser sets it automatically to 'multipart/form-data'
-      const response = await fetch('http://localhost:5000/api/products', {
+      const response = await fetch('https://app-backend-msic.onrender.com/api/products', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
