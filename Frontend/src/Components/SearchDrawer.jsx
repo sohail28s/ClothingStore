@@ -50,7 +50,7 @@ export default function SearchDrawer({ isOpen, onClose }) {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://app-backend-msic.onrender.com/api/products');
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/products');
       if (!response.ok) throw new Error('Failed to fetch products');
       
       const jsonResponse = await response.json();
@@ -136,7 +136,7 @@ export default function SearchDrawer({ isOpen, onClose }) {
                     imagePath = product.variants[0].images[0];
                   }
 
-                  const backendUrl = 'https://app-backend-msic.onrender.com/';
+                  const backendUrl = import.meta.env.VITE_API_BASE_URL + '/';
                   const productImage = imagePath ? (imagePath.startsWith('http') ? imagePath : `${backendUrl}${imagePath}`) : null;
 
                   return (

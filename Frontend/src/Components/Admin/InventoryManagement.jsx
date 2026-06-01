@@ -63,7 +63,7 @@ export default function InventoryManagement() {
     try {
       const token = localStorage.getItem('admin_token');
       // Passing the token ensures the backend sends Draft products too!
-      const response = await fetch('https://app-backend-msic.onrender.com/api/products', {
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/products', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const result = await response.json();

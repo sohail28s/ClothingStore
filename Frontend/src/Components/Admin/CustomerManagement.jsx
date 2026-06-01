@@ -31,7 +31,7 @@
 //       const token = localStorage.getItem('admin_token');
 //       if (!token) return;
 
-//       const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customers', {
+//       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/admin/customers', {
 //         headers: { 'Authorization': `Bearer ${token}` }
 //       });
 //       const result = await response.json();
@@ -530,7 +530,7 @@
 //       const token = localStorage.getItem('admin_token');
 //       if (!token) return;
 
-//       const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customers', {
+//       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/admin/customers', {
 //         headers: { 'Authorization': `Bearer ${token}` }
 //       });
 //       const result = await response.json();
@@ -681,7 +681,7 @@
 
 //       } else {
 //         // --- POST: ADD NEW CUSTOMER ---
-//         const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customer', {
+//         const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/admin/customer', {
 //           method: 'POST',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -1055,7 +1055,7 @@
 //       const token = localStorage.getItem('admin_token');
 //       if (!token) return;
 
-//       const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customers', {
+//       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/admin/customers', {
 //         headers: { 'Authorization': `Bearer ${token}` }
 //       });
 //       const result = await response.json();
@@ -1218,7 +1218,7 @@
 //         // Your specific POST API expects flat address variables for creation
 //         const firstAddress = formData.addresses[0];
         
-//         const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customer', {
+//         const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/admin/customer', {
 //           method: 'POST',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -1629,7 +1629,7 @@ export default function CustomerManagement() {
       const token = localStorage.getItem('admin_token');
       if (!token) return;
 
-      const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customers', {
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/admin/customers', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const result = await response.json();
@@ -1796,7 +1796,7 @@ export default function CustomerManagement() {
 
   //     } else {
   //       // --- POST: ADD NEW CUSTOMER ---
-  //       const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customer', {
+  //       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/admin/customer', {
   //         method: 'POST',
   //         headers: {
   //           'Content-Type': 'application/json',
@@ -1881,7 +1881,7 @@ export default function CustomerManagement() {
         // --- POST: ADD NEW CUSTOMER ---
         const firstAddress = formData.addresses[0] || {};
         
-        const response = await fetch('https://app-backend-msic.onrender.com/api/admin/customer', {
+        const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/admin/customer', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

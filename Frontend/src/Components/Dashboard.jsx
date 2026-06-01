@@ -76,7 +76,7 @@
 
 //     try {
 //       // 1. PUT request to update user profile
-//       const response = await fetch('https://app-backend-msic.onrender.com/api/user/profile', {
+//       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/user/profile', {
 //         method: 'PUT',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -131,7 +131,7 @@
 //     setIsSavingAddress(true);
 
 //     try {
-//       const response = await fetch('https://app-backend-msic.onrender.com/api/user/address', {
+//       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/user/address', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -560,7 +560,7 @@
 //       const fetchMyOrders = async () => {
 //         setIsLoadingOrders(true);
 //         try {
-//           const response = await fetch('https://app-backend-msic.onrender.com/api/orders/my-orders', {
+//           const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/orders/my-orders', {
 //             method: 'GET',
 //             headers: {
 //               'Content-Type': 'application/json',
@@ -612,7 +612,7 @@
 //     e.preventDefault();
 //     setIsSavingAccount(true);
 //     try {
-//       const response = await fetch('https://app-backend-msic.onrender.com/api/user/profile', {
+//       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/user/profile', {
 //         method: 'PUT',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -650,7 +650,7 @@
 //     e.preventDefault();
 //     setIsSavingAddress(true);
 //     try {
-//       const response = await fetch('https://app-backend-msic.onrender.com/api/user/address', {
+//       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/user/address', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -1072,7 +1072,7 @@ export default function Dashboard() {
       const fetchMyOrders = async () => {
         setIsLoadingOrders(true);
         try {
-          const response = await fetch('https://app-backend-msic.onrender.com/api/orders/my-orders', {
+          const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/orders/my-orders', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -1094,7 +1094,7 @@ export default function Dashboard() {
       const fetchMyWishlist = async () => {
         setIsLoadingWishlist(true);
         try {
-          const response = await fetch('https://app-backend-msic.onrender.com/api/user/wishlist', {
+          const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/user/wishlist', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -1162,7 +1162,7 @@ export default function Dashboard() {
     e.preventDefault();
     setIsSavingAccount(true);
     try {
-      const response = await fetch('https://app-backend-msic.onrender.com/api/user/profile', {
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/user/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -1200,7 +1200,7 @@ export default function Dashboard() {
     e.preventDefault();
     setIsSavingAddress(true);
     try {
-      const response = await fetch('https://app-backend-msic.onrender.com/api/user/address', {
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/user/address', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

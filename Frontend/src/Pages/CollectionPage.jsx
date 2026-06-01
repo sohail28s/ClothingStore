@@ -61,7 +61,7 @@ export default function CollectionPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://app-backend-msic.onrender.com/api/products');
+        const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/products');
         const result = await response.json();
         
         if (result.success) {

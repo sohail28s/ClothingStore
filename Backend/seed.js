@@ -3,7 +3,7 @@ const path = require('path');
 const csv = require('csv-parser');
 const axios = require('axios'); 
 
-const API_URL = 'https://app-backend-msic.onrender.com/api/products'; 
+const API_URL = import.meta.env.VITE_API_BASE_URL + '/api/products'; 
 const ADMIN_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjgyNDY0MWJjZTc3YmVmNjk0MzE1NyIsImlhdCI6MTc3NzkwMDMxMCwiZXhwIjoxNzc4NTA1MTEwfQ.Op-BYSpGOBAM-4jWzvlig_ZM_yvdEfYlBQY98I9jJbo'; // 🚨 PASTE YOUR TOKEN HERE
 
 const productsMap = new Map();

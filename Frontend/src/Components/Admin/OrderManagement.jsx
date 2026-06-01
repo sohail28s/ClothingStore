@@ -240,7 +240,7 @@
 //     setIsLoading(true);
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch('https://app-backend-msic.onrender.com/api/orders', {
+//       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/orders', {
 //         headers: { 'Authorization': `Bearer ${token}` }
 //       });
 //       const result = await response.json();
@@ -532,7 +532,7 @@ export default function OrderManagement() {
     setIsLoading(true);
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch('https://app-backend-msic.onrender.com/api/orders', {
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/orders', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const result = await response.json();

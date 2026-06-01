@@ -12,7 +12,7 @@ export default function TestAPI() {
     try {
       console.log("Fetching from https://app-backend-msic.onrender.com/api/products...");
       
-      const response = await fetch('https://app-backend-msic.onrender.com/api/products');
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/products');
       
       // Check if the network request itself failed (e.g., 404, 500)
       if (!response.ok) {

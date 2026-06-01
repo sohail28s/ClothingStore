@@ -40,7 +40,7 @@ export default function AuthPage() {
 
     try {
       // USING EXPLICIT LOCALHOST URL
-      const response = await fetch('https://app-backend-msic.onrender.com/api/auth/signup', {
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -76,7 +76,7 @@ export default function AuthPage() {
 
     try {
       // USING EXPLICIT LOCALHOST URL
-      const response = await fetch('https://app-backend-msic.onrender.com/api/auth/login', {
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

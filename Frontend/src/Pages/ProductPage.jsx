@@ -38,7 +38,7 @@ export default function ProductPage() {
     setIsWishlisted(!isWishlisted); // Instantly fill the heart
 
     try {
-      const response = await fetch('https://app-backend-msic.onrender.com/api/user/wishlist/toggle', {
+      const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/user/wishlist/toggle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
