@@ -129,7 +129,7 @@ export default function AdminDashboard() {
               placeholder="Admin Email" 
               value={loginEmail} 
               onChange={(e) => setLoginEmail(e.target.value)}
-              className="w-full bg-transparent border border-nav-dark px-4 py-3 text-xs uppercase tracking-widest outline-none focus:bg-gray-50 transition-colors" 
+              className="w-full bg-transparent border border-nav-dark px-4 py-3 text-xs  tracking-widest outline-none focus:bg-gray-50 transition-colors" 
             />
             
             <input 
@@ -138,7 +138,7 @@ export default function AdminDashboard() {
               placeholder="Password" 
               value={loginPassword} 
               onChange={(e) => setLoginPassword(e.target.value)}
-              className="w-full bg-transparent border border-nav-dark px-4 py-3 text-xs uppercase tracking-widest outline-none focus:bg-gray-50 transition-colors" 
+              className="w-full bg-transparent border border-nav-dark px-4 py-3 text-xs tracking-widest outline-none focus:bg-gray-50 transition-colors" 
             />
             
             <button 
