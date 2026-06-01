@@ -17,7 +17,16 @@ const app = express();
 connectToDB();
 
 // Middlewares
-app.use(cors());
+// app.use(cors());
+
+
+app.use(cors({
+    origin: [
+        'http://localhost:5173', // For local development testing
+        'https://clothing-store-psi-one.vercel.app' // Your live storefront
+    ],
+    credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static("uploads"))
