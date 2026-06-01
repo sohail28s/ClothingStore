@@ -289,7 +289,7 @@
 //   const handleStatusChange = async (dbOrderId, newStatus) => {
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch(`https://app-backend-msic.onrender.com/api/orders/${dbOrderId}/status`, {
+//       const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/${dbOrderId}/status`, {
 //         method: 'PATCH',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -569,7 +569,7 @@ export default function OrderManagement() {
     setIsLoadingDetails(true);
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch(`https://app-backend-msic.onrender.com/api/orders/${dbOrderId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/${dbOrderId}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const result = await response.json();
@@ -604,7 +604,7 @@ export default function OrderManagement() {
             size: item.size,
             quantity: item.quantity,
             price: item.price,
-            image: item.image ? `https://app-backend-msic.onrender.com/${item.image.replace(/\\/g, '/')}` : null
+            image: item.image ? `${import.meta.env.VITE_API_BASE_URL}/${item.image.replace(/\\/g, '/')}` : null
           }))
         });
       }
@@ -628,7 +628,7 @@ export default function OrderManagement() {
     
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch(`https://app-backend-msic.onrender.com/api/orders/${dbOrderId}/status`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/${dbOrderId}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

@@ -5,7 +5,7 @@ import OrderManagement from './OrderManagement';
 import InventoryManagement from './InventoryManagement';
 import CustomerManagement from './CustomerManagement';
 import AnalyticsDashboard from './AnalyticsDashboard'; 
-import SettingsManagement from './SettingManagement';
+// import SettingsManagement from './SettingManagement';
 
 export default function AdminDashboard() {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
@@ -105,7 +105,7 @@ export default function AdminDashboard() {
     { id: 'products', label: 'Products', icon: Package },
     { id: 'inventory', label: 'Inventory', icon: ClipboardList },
     { id: 'customers', label: 'Customers', icon: Users },
-    { id: 'settings', label: 'Settings', icon: Settings },
+    // { id: 'settings', label: 'Settings', icon: Settings },
   ];
   if (!isAdminLoggedIn) {
     return (
@@ -316,7 +316,7 @@ export default function AdminDashboard() {
           {activeTab === 'orders' && <OrderManagement />}
           {activeTab === 'inventory' && <InventoryManagement />}
           {activeTab === 'customers' && <CustomerManagement />}
-          {activeTab === 'settings' && <SettingsManagement />}
+          {/* {activeTab === 'settings' && <SettingsManagement />} */}
         </div>
       </main>
     </div>

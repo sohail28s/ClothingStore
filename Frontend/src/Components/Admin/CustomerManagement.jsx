@@ -71,7 +71,7 @@
     
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${userId}/status`, {
+//       const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/customer/${userId}/status`, {
 //         method: 'PATCH',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -158,7 +158,7 @@
 
 //       if (isEditing) {
 //         // Send PUT request to update customer
-//         const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
+//         const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/customer/${selectedCustomer._id}`, {
 //           method: 'PUT',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -568,7 +568,7 @@
     
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${userId}/status`, {
+//       const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/customer/${userId}/status`, {
 //         method: 'PATCH',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -659,7 +659,7 @@
 //           postalCode: formData.postcode
 //         };
 
-//         const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
+//         const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/customer/${selectedCustomer._id}`, {
 //           method: 'PUT',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -1092,7 +1092,7 @@
     
 //     try {
 //       const token = localStorage.getItem('admin_token');
-//       const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${userId}/status`, {
+//       const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/customer/${userId}/status`, {
 //         method: 'PATCH',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -1192,7 +1192,7 @@
 
 //       if (isEditing) {
 //         // --- PUT: EDIT EXISTING CUSTOMER ---
-//         const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
+//         const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/customer/${selectedCustomer._id}`, {
 //           method: 'PUT',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -1666,7 +1666,7 @@ export default function CustomerManagement() {
     
     try {
       const token = localStorage.getItem('admin_token');
-      const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${userId}/status`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/customer/${userId}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -1769,7 +1769,7 @@ export default function CustomerManagement() {
 
   //     if (isEditing) {
   //       // --- PUT: EDIT EXISTING CUSTOMER (QUICK FIX) ---
-  //       const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
+  //       const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/customer/${selectedCustomer._id}`, {
   //         method: 'PUT',
   //         headers: {
   //           'Content-Type': 'application/json',
@@ -1853,7 +1853,7 @@ export default function CustomerManagement() {
 
       if (isEditing) {
         // --- PUT: EDIT EXISTING CUSTOMER ---
-        const response = await fetch(`https://app-backend-msic.onrender.com/api/admin/customer/${selectedCustomer._id}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/customer/${selectedCustomer._id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

@@ -51,8 +51,8 @@ export default function AnalyticsDashboard() {
 
         // 2. Fetch Both Reports Simultaneously
         const [customersRes, productsRes] = await Promise.all([
-          fetch(`https://app-backend-msic.onrender.com/api/admin/dashboard/customers${queryString}`, { headers }),
-          fetch(`https://app-backend-msic.onrender.com/api/admin/dashboard/product-sales${queryString}`, { headers })
+          fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/dashboard/customers${queryString}`, { headers }),
+          fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/dashboard/product-sales${queryString}`, { headers })
         ]);
 
         const customersResult = await customersRes.json();
@@ -360,8 +360,8 @@ export default function AnalyticsDashboard() {
 //         }
 
 //         const [customersRes, productsRes] = await Promise.all([
-//           fetch(`https://app-backend-msic.onrender.com/api/admin/dashboard/customers${queryString}`, { headers }),
-//           fetch(`https://app-backend-msic.onrender.com/api/admin/dashboard/product-sales${queryString}`, { headers })
+//           fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/dashboard/customers${queryString}`, { headers }),
+//           fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/dashboard/product-sales${queryString}`, { headers })
 //         ]);
 
 //         const customersResult = await customersRes.json();

@@ -64,7 +64,7 @@ export default function ProductPage() {
     window.scrollTo(0, 0);
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`https://app-backend-msic.onrender.com/api/products/${slug}`);
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/products/${slug}`);
         const result = await response.json();
         
         if (result.success && result.data) {
@@ -90,7 +90,7 @@ export default function ProductPage() {
               // Check if image is local path or full URL
               images: v.images && v.images.length > 0 
                 ? v.images.map(img => ({ 
-                    url: img.startsWith('http') ? img : `https://app-backend-msic.onrender.com/${img.replace(/\\/g, '/')}` 
+                    url: img.startsWith('http') ? img : `${import.meta.env.VITE_API_BASE_URL}/${img.replace(/\\/g, '/')}` 
                   })) 
                 : [{ url: 'https://via.placeholder.com/400x500?text=No+Image' }],
               sizes: (v.sizes || []).map(s => ({ 

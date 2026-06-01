@@ -80,7 +80,7 @@ export default function CollectionPage() {
               name: v.colorName,
               hex: v.hexCode,
               images: v.images && v.images.length > 0 
-                ? v.images.map(img => ({ url: `https://app-backend-msic.onrender.com/${img.replace(/\\/g, '/')}` })) 
+                ? v.images.map(img => ({ url: `${import.meta.env.VITE_API_BASE_URL}/${img.replace(/\\/g, '/')}` })) 
                 : [{ url: 'https://via.placeholder.com/400x500?text=No+Image' }],
               sizes: v.sizes.map(s => ({ size: s.size.toString().toUpperCase(), stock: s.stock, id: s._id }))
             }))

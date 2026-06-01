@@ -10,7 +10,7 @@ export default function TestAPI() {
     setError(null);
     
     try {
-      console.log("Fetching from https://app-backend-msic.onrender.com/api/products...");
+      console.log("Fetching from ${import.meta.env.VITE_API_BASE_URL}/api/products...");
       
       const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/products');
       
