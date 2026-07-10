@@ -23,7 +23,8 @@ connectToDB();
 app.use(cors({
     origin: [
         'http://localhost:5173', // For local development testing
-        'https://clothing-store-psi-one.vercel.app' // Your live storefront
+        'https://clothing-store-psi-one.vercel.app',
+        'https://outrey.vercel.app' // Your live storefront
     ],
     credentials: true
 }));
